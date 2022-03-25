@@ -285,7 +285,7 @@ if args.mapfile:
 book = session.book
 ctable = book.get_table()  # Commodity lookup table
 # All the world's the US, right??
-dollars = ctable.lookup('CURRENCY', 'USD')
+dollars = ctable.lookup('CURRENCY', 'AUD')
 #
 # Import the lists we understand.
 #

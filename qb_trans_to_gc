@@ -161,7 +161,7 @@ if args.mapfile:
 #
 session = gnucash.Session(args.gcfile, mode=gnucash.SessionOpenMode.SESSION_NORMAL_OPEN)
 book = session.book
-dollars = book.get_table().lookup('CURRENCY', 'USD')
+dollars = book.get_table().lookup('CURRENCY', 'AUD')
 root_acct = book.get_root_account()
 
 #

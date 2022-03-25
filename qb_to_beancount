@@ -62,7 +62,7 @@ def import_accounts(list):
         name = '%s:%s' % (type, fixup_acct_name(remap.remap(entry['NAME'])))
         basename = entry['NAME'].split(':')[-1]
         AccountMap[basename] = name
-        emit('2000-01-01 open %s USD' % (name))
+        emit('2000-01-01 open %s AUD' % (name))
 
 #
 # OK, move on to CSV transaction import.
@@ -124,7 +124,7 @@ def ReadTransaction(reader):
         if not account:
             print('Unknown account', entry['Account'])
             account = 'Expenses:Miscellaneous'
-        emit('  %-24s %s USD ; %s' % (account, amount, entry['Memo']))
+        emit('  %-24s %s AUD ; %s' % (account, amount, entry['Memo']))
         #
         # Are we done?
         # The last entry will be '0.00' as a string. If we do a numeric
